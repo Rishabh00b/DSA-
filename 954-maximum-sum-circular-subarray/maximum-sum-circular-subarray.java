@@ -22,7 +22,7 @@ class Solution {
             minsum = Math.min(minsum, currentmin);
         }
 
-        // All elements are negative
+        
         if (maxsum < 0) {
             return maxsum;
         }
