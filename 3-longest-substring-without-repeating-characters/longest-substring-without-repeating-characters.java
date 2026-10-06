@@ -17,8 +17,8 @@ class Solution {
                 low++;
                 k=high-low;
             }
-            int len=high-low;
-            max=Math.max(len,max);
+            // int len=high-low;
+            max=Math.max(k,max);
         } return max;
     }
 }
