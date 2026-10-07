@@ -9,7 +9,7 @@ class Solution {
             hm.put(arr[high],hm.getOrDefault(arr[high], 0)+1);
             high++;
 
-            if(hm.size()>2){
+            while(hm.size()>2){
                 
 
                 if (hm.get(arr[low]) == 1) {
