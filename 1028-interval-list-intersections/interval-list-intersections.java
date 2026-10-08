@@ -21,12 +21,7 @@ class Solution {
             ans.add(new int[]{start,end});
 
         }
-        // if(s1==e2){
-        //     ans.add(new int[]{s1,e2});
-        // }
-        // if(s2==e1){
-        //     ans.add(new int[]{s2,e1});
-        // }
+        
 
         if (e1 < e2) {
             i++;
