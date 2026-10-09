@@ -20,13 +20,13 @@ class Solution {
                 st.pop();
             }
 
-            else ans=false;
+            else return false;
 
 
             
 
         }
-        if(!st.isEmpty()){ans=false;}
-        return ans;
+        return st.isEmpty();
+        // return ans;
     }
 }
