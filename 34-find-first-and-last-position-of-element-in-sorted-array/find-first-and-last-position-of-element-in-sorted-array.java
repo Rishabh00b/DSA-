@@ -1,46 +1,39 @@
 class Solution {
-    public int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] arr, int target) {
+        int n=arr.length;
+        int [] ans={-1,-1};
 
-        int[] arr = {-1, -1};
+        int low=0;
+        int high=n-1;
+        while(low<=high){
+            int mid=low+(high-low)/2;
 
-      
-        int i = 0;
-        int j = nums.length - 1;
-
-        while (i <= j) {
-            int mid = i + (j - i) / 2;
-
-            if (nums[mid] == target) {
-                arr[0] = mid;
-                j = mid - 1;       
+            if(arr[mid]==target){
+                ans[0]=mid;
+                high=mid-1;
             }
-            else if (nums[mid] < target) {
-                i = mid + 1;
+          else  if(arr[mid]>target){
+                high=mid-1;
             }
-            else {
-                j = mid - 1;
-            }
+            else low=mid+1;
+
         }
 
-       
-        i = 0;
-        j = nums.length - 1;
+        low=0;
+        high=n-1;
 
-        while (i <= j) {
-            int mid = i + (j - i) / 2;
+        while(low<=high){
+         int    mid=low+(high-low)/2;
 
-            if (nums[mid] == target) {
-                arr[1] = mid;
-                i = mid + 1;      
+            if(arr[mid]==target){
+                ans[1]=mid;
+                low=mid+1;
             }
-            else if (nums[mid] < target) {
-                i = mid + 1;
+            else if(arr[mid]>target){
+                high=mid-1;
             }
-            else {
-                j = mid - 1;
-            }
+            else low=mid+1;
         }
-
-        return arr;
+        return ans;
     }
 }
