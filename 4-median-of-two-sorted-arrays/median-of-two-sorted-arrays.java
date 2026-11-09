@@ -6,7 +6,7 @@ class Solution {
             if(m==0) return nums2[0];
             return nums1[0];
         }
-        int[] nums = new int[m+n] ;
+        int[] nums = new int[m+n];
         int i=0;
         int j=0;
         while(i<m && j<n){
